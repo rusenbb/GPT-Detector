@@ -1,0 +1,5 @@
+models
+results
+__pycache__
+.DS_Store
+temp.ipynb
