@@ -8,6 +8,8 @@ from tqdm import tqdm
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score, confusion_matrix
 import pandas as pd
 
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
 def get_model(model_name: str):
     """Get the model and tokenizer from the model name"""
 
@@ -15,13 +17,13 @@ def get_model(model_name: str):
         mkdir("models")
 
     if not exists(f"models/{model_name}-model"):
-        print("Model does not exist, downloading...")
+        print(f"Model {model_name} does not exist, downloading...")
         model = AutoModelForSequenceClassification.from_pretrained(model_name)
         tokenizer = AutoTokenizer.from_pretrained(model_name)
         model.save_pretrained(f"./models/{model_name}-model")
         tokenizer.save_pretrained(f"./models/{model_name}-tokenizer")
     else:
-        print("Model already exists, loading...")
+        print(f"Model {model_name} already exists, loading...")
         model = AutoModelForSequenceClassification.from_pretrained(f"./models/{model_name}-model")
         tokenizer = AutoTokenizer.from_pretrained(f"./models/{model_name}-tokenizer")
 
@@ -44,11 +46,11 @@ def model_predict(model, tokenizer, sentences):
     for i in tqdm(range(0, len(sentences), 100)):
         batch = sentences[i:i + 100]
         # Tokenize sentences
-        inputs = tokenizer(batch, padding=True, truncation=True, return_tensors="pt", max_length=512)
+        inputs = tokenizer(batch, padding=True, truncation=True, return_tensors="pt", max_length=512).to(device)
         # Classify sentences
         with torch.no_grad():
             outputs = model(**inputs) # get the logits
-            labels = np.argmax(outputs.logits, axis=1)
+            labels = np.argmax(outputs.logits.to("cpu"), axis=1)
             labels = labels.tolist() # convert to list
             outputs_list.extend(labels) # add to outputs list
 
