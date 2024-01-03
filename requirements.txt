@@ -7,3 +7,4 @@ matplotlib==[version]
 torch==[version]
 scikit-learn==[version]
 seaborn==[version]
+datasets
