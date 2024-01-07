@@ -13,19 +13,19 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 def get_model(model_name: str):
     """Get the model and tokenizer from the model name"""
 
-    if not exists("models"):
-        mkdir("models")
+    if not exists("Models"):
+        mkdir("Models")
 
-    if not exists(f"models/{model_name}-model"):
+    if not exists(f"Models/{model_name}-model"):
         print(f"Model {model_name} does not exist, downloading...")
         model = AutoModelForSequenceClassification.from_pretrained(model_name)
         tokenizer = AutoTokenizer.from_pretrained(model_name)
-        model.save_pretrained(f"./models/{model_name}-model")
-        tokenizer.save_pretrained(f"./models/{model_name}-tokenizer")
+        model.save_pretrained(f"./Models/{model_name}-model")
+        tokenizer.save_pretrained(f"./Models/{model_name}-tokenizer")
     else:
         print(f"Model {model_name} already exists, loading...")
-        model = AutoModelForSequenceClassification.from_pretrained(f"./models/{model_name}-model")
-        tokenizer = AutoTokenizer.from_pretrained(f"./models/{model_name}-tokenizer")
+        model = AutoModelForSequenceClassification.from_pretrained(f"./Models/{model_name}-model")
+        tokenizer = AutoTokenizer.from_pretrained(f"./Models/{model_name}-tokenizer")
 
     return model, tokenizer
 
