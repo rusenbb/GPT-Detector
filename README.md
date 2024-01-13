@@ -1,8 +1,8 @@
-# Project Title
+# To AI, or Not to AI A Deep Learning Approach to Detect AI Generated Text
 
 ## Description
 
-A brief description of what this project does and who it's for.
+This project addresses the challenge of distinguishing between AI-generated text and human-written content, amidst concerns about academic integrity and misinformation raised by the rise of Generative AI and Large Language Models such as ChatGPT and GPT-4. It entails developing and optimizing neural networks, with a focus on fine-tuning three transformer models from Hugging Face, all of which are RoBERTa-based, to accurately identify AI-generated text. This initiative is critical in combating AI's potential for spreading false information and ensuring the credibility of online content. The project promotes responsible AI use and advances detection methods in the digital realm.
 
 ## Usage
 
