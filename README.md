@@ -40,4 +40,4 @@ The `progress.txt` file contains a log of the project's progress.
 ## Contributing
 
 This project is not open to contributions at this time.
-It is made by [Aryan Mann](https://github.com/rusenbb) and [Siddharth Singh](https://github.com/BurakErcn).
+It is made by [Ruşen Birben](https://github.com/rusenbb) and [Burak Ercan](https://github.com/BurakErcn).
