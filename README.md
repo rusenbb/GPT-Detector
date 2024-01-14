@@ -7,6 +7,11 @@ This project addresses the challenge of distinguishing between AI-generated text
 ## Usage
 
 To run the main notebook, open `main.ipynb` in a Jupyter notebook environment.
+By running the following command:
+
+```bash
+jupyter notebook main.ipynb
+```
 
 ## Installation
 
@@ -26,6 +31,10 @@ Or you can download them on the following google drive link:
 
 - [Google Drive Link](https://drive.google.com/drive/folders/1AxTw-65OnvyHT71_XQSLDNeeadI7yXij?usp=sharing)
 
+Additionally, link to the pre-data we used:
+
+[Pre-Data](https://github.com/dukeraphaelng/synth_detectives)
+
 ## Data
 
 The data used in this project is located in the `Data/` directory. Here's a brief description of each file:
@@ -42,10 +51,6 @@ The data used in this project is located in the `Data/` directory. Here's a brie
 The `Scripts/` directory contains utility scripts used in this project:
 
 - `utils.py`: This file contains utility functions for handling transformer models. It includes functions to download, load, and save transformer models and their tokenizers (`get_model`), make predictions on a batch of sentences (`model_predict`), and evaluate model performance by computing accuracy, recall, precision, and F1-score (`eval_model`).
-
-## Progress
-
-The `progress.txt` file contains a log of the project's progress.
 
 ## Contributing
 
