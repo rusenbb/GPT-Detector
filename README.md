@@ -16,6 +16,16 @@ To install the project's dependencies, run the following command:
 pip install -r requirements.txt
 ```
 
+The base models should download automatically when running the main notebook. However, if you want to download them manually, you can click on the model name and download the following models:
+
+- [`roberta-base`](https://huggingface.co/roberta-base-openai-detector)
+- [`ChatGPT-Detector`](https://huggingface.co/Hello-SimpleAI/chatgpt-detector-roberta)
+- [`ChatGPT-Detector-LLI`](https://huggingface.co/Nintw923/chatgpt-detector-lli-hc3)
+
+Or you can download them on the following google drive link:
+
+- [Google Drive Link](https://drive.google.com/drive/folders/1AxTw-65OnvyHT71_XQSLDNeeadI7yXij?usp=sharing)
+
 ## Data
 
 The data used in this project is located in the `Data/` directory. Here's a brief description of each file:
@@ -40,4 +50,4 @@ The `progress.txt` file contains a log of the project's progress.
 ## Contributing
 
 This project is not open to contributions at this time.
-It is made by [Ruşen Birben](https://github.com/rusenbb) and [Burak Ercan](https://github.com/BurakErcn).
+This project is created by [Ruşen Birben](https://github.com/rusenbb) and [Burak Ercan](https://github.com/BurakErcn).
