@@ -13,6 +13,11 @@ By running the following command:
 jupyter notebook main.ipynb
 ```
 
+You can also directly access our fine-tuned and ensembled model on hugging face, and try it:
+
+[`Huggin Face Space 🤗`](https://huggingface.co/spaces/rusen/gpt_detector)
+
+
 ## Installation
 
 To install the project's dependencies, run the following command:
